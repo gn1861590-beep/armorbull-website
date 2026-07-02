@@ -1,3 +1,1 @@
-document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{const id=a.getAttribute('href');if(id.length>1){e.preventDefault();document.querySelector(id)?.scrollIntoView({behavior:'smooth'});}}));
-const reveal=()=>document.querySelectorAll('.card,.feature-box,.service,.detail-card,.detail-img').forEach(el=>{const r=el.getBoundingClientRect();if(r.top<innerHeight-80)el.style.opacity=1,el.style.transform='translateY(0)'});
-document.querySelectorAll('.card,.feature-box,.service,.detail-card,.detail-img').forEach(el=>{el.style.opacity=.001;el.style.transform='translateY(18px)';el.style.transition='opacity .5s ease, transform .5s ease'});addEventListener('scroll',reveal);reveal();
+const toggle=document.querySelector('.mobile-toggle');const menu=document.querySelector('.menu');if(toggle){toggle.addEventListener('click',()=>menu.classList.toggle('open'))}
